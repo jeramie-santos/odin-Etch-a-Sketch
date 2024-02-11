@@ -29,8 +29,6 @@ function createCanvas(){
 
     let numberOfSquares = parseInt(prompt("Enter the num ber of squares per side"));
     
-    canva.textContent = `Canvas size ${numberOfSquares} x ${numberOfSquares}`;
-    
     if (numberOfSquares >= 100){
         numberOfSquares = 100;
         for (let x = 1; x <= numberOfSquares; x++){    
@@ -43,7 +41,7 @@ function createCanvas(){
             }
             mainContainer.appendChild(container);
         }   
-    } else {
+    }else {
         for (let x = 1; x <= numberOfSquares; x++){    
             let container = document.createElement('div');
             container.setAttribute('id', 'container');
@@ -56,6 +54,8 @@ function createCanvas(){
         }
     }
 
+    canva.textContent = `Canvas size ${numberOfSquares} x ${numberOfSquares}`;
+
     let items = document.querySelectorAll('.item');
 
     for (let i = 0; i <= items.length; i++){
@@ -65,6 +65,7 @@ function createCanvas(){
     }
     
 }
+
 
 let items = document.querySelectorAll('.item');
 
